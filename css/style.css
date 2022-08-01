@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.bg {
+    background: linear-gradient(#80BDE3, #FFF);
+    height: 100vh;
+    width: 100vw;
+}
+
+.cloudsBG {
+    display: block;
+    position: absolute;
+    height: 50%;
+}
+
+.cloudsTop {
+    top: 0%;
+}
+
+.cloudsBottom {
+    top: 50%;
+}
+
+.cloudsFast {
+    animation: 10s clouds infinite linear;
+}
+
+.cloudsSlow {
+    animation: 20s clouds infinite linear reverse;
+}
+
+.pokedex-board {
+    height: 500px;
+    position: absolute;
+    top: 15vh;
+    left: 25%;
+    z-index: 0;
+}
+
+@keyframes clouds {
+    from {
+        right: -100%;
+    }
+
+    to {
+        right: 100%;
+    }
+}
