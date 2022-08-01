@@ -12,15 +12,24 @@
 <body>
     
     <div class="pokedex">
-        <!-- <img src="./images/clouds.png" alt="nuvens" class="cloudsBG cloudsFast cloudsTop">
-        <img src="./images/clouds.png" alt="nuvens" class="cloudsBG cloudsSlow cloudsBottom"> -->
+        <img src="./images/clouds.png" alt="nuvens" class="cloudsBG cloudsFast cloudsTop">
+        <img src="./images/clouds.png" alt="nuvens" class="cloudsBG cloudsSlow cloudsBottom">
         
         <div class="pokedex-board">
             <img src="./images/pokedex.png" alt="pokedex" class="pokedex-machine">
 
-            <span class="pokemon-number">001</span>
+            <input type="number" name="search-pokemon-number" id="search-pokemon-number" min="001" max="999" maxlength="3" placeholder="001">
 
-            <input type="search" name="search-pokemon" id="search-pokemon">
+            <div class="pads">
+                <div class="click-pads">
+                    <img src="./images/arrow.png" alt="left arrow" class="arrow left">
+                </div>
+                <div class="click-pads">
+                    <img src="./images/arrow.png" alt="left arrow" class="arrow right">
+                </div>
+            </div>
+
+            <input type="search" name="search-pokemon-name" id="search-pokemon-name" maxlength="15" placeholder="Pokemón Name">
             
             <span class="pokemon-name">Bulbassaur</span>
 

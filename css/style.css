@@ -49,7 +49,7 @@
     width: 65%;
 }
 
-.pokemon-number {
+#search-pokemon-number {
     position: absolute;
     background-color: #5FC480;
     text-align: center;
@@ -63,29 +63,69 @@
     font-weight: 700;
 }
 
+.pads {
+    position: absolute;
+    height: 10%;
+    width: 9%;
+    bottom: 14%;
+    left: 37%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.click-pads {
+    padding: 3px;
+    height: 90%;
+    transition: all 300ms;
+}
+
+.arrow {
+    height: 100%;
+}
+
+.right {
+    transform: rotate(-90deg);
+}
+
+.left {
+    transform: rotate(90deg);
+}
+
+.click-pads:active {
+    transform: translate(-1.5px, 1.5px);
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .pokemon-name {
     position: absolute;
     background-color: #084035;
     color: #afde1f;
     text-align: left;
-    padding: 5px;
+    margin-top: 8px;
+    padding: 8px;
     height: 30%;
     width: 25%;
     top: 40%;
     right: 20.2%;
     border: #000 1px solid;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 2vw;
     font-weight: 500;
 }
 
-#search-pokemon {
+#search-pokemon-name {
     position: absolute;
     background-color: #ccc;
     color: #222;
     outline: none;
     text-align: left;
-    padding: 5px;
+    padding: 8px;
     width: 25%;
     top: 30%;
     right: 20.2%;
@@ -93,6 +133,7 @@
     border-radius: 5px;
     font-size: 2vw;
     font-weight: 700;
+    margin-bottom: 10px;
 }
 
 .generations {
@@ -103,7 +144,7 @@
     height: 15%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 3px;
+    gap: 8px;
     padding: 2px;
 }
 .generation-button {
@@ -111,6 +152,16 @@
     border: none;
     border-radius: 5px;
     box-shadow: -2px 2px #000, -1px 1px #ccc;
+    font-size: 2vw;
+    transition: all 500ms;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.generation-button:active {
+    background: #0ba6ac;
+    transform: translate(-1.5px, 1.5px);
+    color: #999;
 }
 
 @keyframes clouds {
