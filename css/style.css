@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     overflow: hidden;
+    outline: none;
+
+    font-family: 'Orbitron', sans-serif;
 }
 
 .pokedex {
@@ -48,10 +53,64 @@
     position: absolute;
     background-color: #5FC480;
     text-align: center;
-    top: 0;
-    border: #2d6340 0.2vw solid;
+    height: 10%;
+    width: 10%;
+    bottom: 14%;
+    left: 22%;
+    box-shadow: #ccc -2px 2px, #000 -3px 3px;
     border-radius: 5px;
     font-size: 3vw;
+    font-weight: 700;
+}
+
+.pokemon-name {
+    position: absolute;
+    background-color: #084035;
+    color: #afde1f;
+    text-align: left;
+    padding: 5px;
+    height: 30%;
+    width: 25%;
+    top: 40%;
+    right: 20.2%;
+    border: #000 1px solid;
+    border-radius: 5px;
+    font-size: 2vw;
+    font-weight: 500;
+}
+
+#search-pokemon {
+    position: absolute;
+    background-color: #ccc;
+    color: #222;
+    outline: none;
+    text-align: left;
+    padding: 5px;
+    width: 25%;
+    top: 30%;
+    right: 20.2%;
+    border: #000 1px solid;
+    border-radius: 5px;
+    font-size: 2vw;
+    font-weight: 700;
+}
+
+.generations {
+    position: absolute;
+    width: 25%;
+    right: 20.2%;
+    bottom: 10%;
+    height: 15%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3px;
+    padding: 2px;
+}
+.generation-button {
+    background: #11ebf4;
+    border: none;
+    border-radius: 5px;
+    box-shadow: -2px 2px #000, -1px 1px #ccc;
 }
 
 @keyframes clouds {
