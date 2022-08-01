@@ -5,10 +5,11 @@
     overflow: hidden;
 }
 
-.bg {
+.pokedex {
     background: linear-gradient(#80BDE3, #FFF);
     height: 100vh;
-    width: 100vw;
+    display: flex;
+    align-items: center;
 }
 
 .cloudsBG {
@@ -34,11 +35,23 @@
 }
 
 .pokedex-board {
-    height: 500px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.pokedex-machine {
+    width: 65%;
+}
+
+.pokemon-number {
     position: absolute;
-    top: 15vh;
-    left: 25%;
-    z-index: 0;
+    background-color: #5FC480;
+    text-align: center;
+    top: 0;
+    border: #2d6340 0.2vw solid;
+    border-radius: 5px;
+    font-size: 3vw;
 }
 
 @keyframes clouds {
