@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
+@font-face {
+    font-family: Essentiarum;
+    src: url('./essentiarum.ttf');
+}
 
 * {
     margin: 0;
@@ -102,7 +106,7 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0;
 }
 
-.pokemon-name {
+.pokemon-description {
     position: absolute;
     background-color: #084035;
     color: #afde1f;
@@ -115,8 +119,25 @@ input[type=number]::-webkit-outer-spin-button {
     right: 20.2%;
     border: #000 1px solid;
     border-radius: 10px;
-    font-size: 2vw;
     font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.emoji-type {
+    font-family: Essentiarum;
+    font-size: 2.5vw;
+}
+
+.pokemon-name, .type {
+    font-size: 1.5vw;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 1vw;
 }
 
 #search-pokemon-name {
