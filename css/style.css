@@ -67,6 +67,14 @@
     font-weight: 700;
 }
 
+.pokemon-image {
+    position: absolute;
+    text-align: center;
+    height: 50%;
+    top: 21%;
+    left: 22.5%;
+}
+
 .pads {
     position: absolute;
     height: 10%;
