@@ -7,20 +7,24 @@
     <link rel="shortcut icon" href="./favicons/pokebolaFavicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
 
+    <script defer src="./js/main.js"></script>
+
     <title>Pokédex</title>
 </head>
 <body>
     
     <div class="pokedex">
+
         <img src="./images/clouds.png" alt="nuvens" class="cloudsBG cloudsFast cloudsTop">
         <img src="./images/clouds.png" alt="nuvens" class="cloudsBG cloudsSlow cloudsBottom">
         
         <div class="pokedex-board">
+
             <img src="./images/pokedex.png" alt="pokedex" class="pokedex-machine">
 
-            <img src="./images/bulbassaur.png" class="pokemon-image" alt="pokemon">
+            <img src="#" class="pokemon-image" alt="pokemon">
 
-            <input type="number" name="search-pokemon-number" id="search-pokemon-number" min="001" max="999" maxlength="3" placeholder="001">
+            <div id="pokemon-number">#</div>
 
             <div class="pads">
                 <div class="click-pads">
@@ -31,25 +35,20 @@
                 </div>
             </div>
 
-            <input type="search" name="search-pokemon-name" id="search-pokemon-name" maxlength="15" placeholder="Pokémon Name">
+            <input type="search" name="search-pokemon-name" id="search-pokemon-name" maxlength="15" placeholder="Pokémon Name or ID">
             
             <div class="pokemon-description">
-                <h1>
-                    <span class="emoji-type">g</span><span class="type"> - Grass</span>
-                </h1>
-                <p class="pokemon-name">
-                    ID: 001
-                </p>
-                <p class="pokemon-name">
-                    Bulbassaur
+                <p class="pokemon-id"></p>
+                <p class="pokemon-name">Hi, Welcome!</p>
+                <p class="type">
                 </p>
                 <div class="stats">
-                    <p class="stat hp">HP: 45</p>
-                    <p class="stat attack">ATK: 49</p>
-                    <p class="stat deffense">DEF: 49</p>
-                    <p class="stat special-attack">Sp. ATK: 65</p>
-                    <p class="stat specal-deffense">Sp. DEF: 65</p>
-                    <p class="stat speed">SPD: 45</p>
+                    <p class="stat hp"></p>
+                    <p class="stat attack"></p>
+                    <p class="stat defense"></p>
+                    <p class="stat special-attack"></p>
+                    <p class="stat specal-defense"></p>
+                    <p class="stat speed"></p>
                 </div>
             </div>
 

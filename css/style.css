@@ -53,9 +53,10 @@
     width: 65%;
 }
 
-#search-pokemon-number {
+#pokemon-number {
     position: absolute;
     background-color: #5FC480;
+    padding: 0.5vw;
     text-align: center;
     height: 10%;
     width: 10%;
@@ -68,11 +69,25 @@
 }
 
 .pokemon-image {
+    display: none;
     position: absolute;
     text-align: center;
-    height: 50%;
-    top: 21%;
-    left: 22.5%;
+    height: 40%;
+    top: 24.5%;
+    left: 25.5%;
+}
+
+.rotate {
+    animation: rotation 8s infinite linear
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
 }
 
 .pads {
@@ -138,14 +153,26 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: 2.5vw;
 }
 
-.pokemon-name, .type {
+.type {
     font-size: 1.5vw;
+    text-transform:capitalize;
+}
+
+.pokemon-name {
+    font-size: 2vw;
+    text-transform:capitalize;
+}
+
+.pokemon-id {
+    font-size: 1.5vw;
+    text-transform:uppercase;
 }
 
 .stats {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     font-size: 1vw;
+    gap: 3px;
 }
 
 #search-pokemon-name {
@@ -165,6 +192,10 @@ input[type=number]::-webkit-outer-spin-button {
     margin-bottom: 10px;
 }
 
+#search-pokemon-name::placeholder {
+    font-size: 1.6vw;
+}
+
 .generations {
     position: absolute;
     width: 25%;
@@ -176,6 +207,7 @@ input[type=number]::-webkit-outer-spin-button {
     gap: 8px;
     padding: 2px;
 }
+
 .generation-button {
     background: #11ebf4;
     border: none;
