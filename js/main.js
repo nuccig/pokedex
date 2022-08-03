@@ -12,6 +12,8 @@ const pokemonSpDefense = document.querySelector('.special-defense')
 const pokemonSpeed = document.querySelector('.speed')
 
 const input = document.querySelector('#search-pokemon-name')
+const rightArrow = document.querySelector('.right')
+const leftArrow = document.querySelector('.left')
 
 const base = ['sprites']
 const initial = ['front_default']
@@ -40,7 +42,6 @@ const renderPokemon = async (pokemon, gen) => {
     let query = base.concat(gen)
     const data = await fetchPokemon(pokemon.toLowerCase())
 
-
     if (data) {
 
         if (query.reduce((o, k)=>o[k], data) != null) {
@@ -65,18 +66,10 @@ const renderPokemon = async (pokemon, gen) => {
         pokemonHP.innerHTML = `HP: ${data['stats']['0']['base_stat']}`
         pokemonAttack.innerHTML = `ATK: ${data['stats']['1']['base_stat']}`
         pokemonDefense.innerHTML = `DEF: ${data['stats']['2']['base_stat']}`
-    
-        if (data['stats']['3']['base_stat']) {
-            pokemonSpAttack.innerHTML = `Sp. ATK: ${data['stats']['3']['base_stat']}`
-        }
-    
-        if (data['stats']['4']['base_stat']) {
-            pokemonSpDefense.innerHTML = `Sp. DEF: ${data['stats']['4']['base_stat']}`
-        }
-    
-        if (data['stats']['5']['base_stat']) {
-            pokemonSpeed.innerHTML = `SPD: ${data['stats']['5']['base_stat']}`
-        }
+        pokemonSpAttack.innerHTML = `Sp. ATK: ${data['stats']['3']['base_stat']}`
+        pokemonSpDefense.innerHTML = `Sp. DEF: ${data['stats']['4']['base_stat']}`
+        pokemonSpeed.innerHTML = `SPD: ${data['stats']['5']['base_stat']}`
+
     } else {
         pokemonImage.style.display = 'none'
         pokemonName.innerHTML = 'Not found :('
@@ -97,11 +90,35 @@ const renderPokemon = async (pokemon, gen) => {
 
 input.addEventListener('keyup', (event) => {
     
-    var btn = event.keyCode;
+    const btn = event.keyCode;
 
     if (btn === 13){
         
         renderPokemon(event.target.value, gen);
+
+    }
+
+})
+
+rightArrow.addEventListener('click', () => {
+
+    const nextNumber = +pokemonNumber.innerHTML + 1
+
+    input.value = ''
+
+    renderPokemon(String(nextNumber), gen)
+
+})
+
+leftArrow.addEventListener('click', () => {
+
+    if (+pokemonNumber.innerHTML > 1) {
+
+        const nextNumber = +pokemonNumber.innerHTML - 1
+
+        input.value = ''
+    
+        renderPokemon(String(nextNumber), gen)
 
     }
 
